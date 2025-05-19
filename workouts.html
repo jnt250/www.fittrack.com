@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workouts - FitTrack</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="dashboard.php">FitTrack</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="workouts.html">Workouts</a></li>
+        <li class="nav-item"><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Workouts</h1>
+
+  <!-- Simulated success message -->
+  <div class="alert alert-success">Workout added successfully!</div>
+
+  <form method="post" class="mb-4">
+    <input type="hidden" name="add_workout" value="1" />
+    <div class="mb-3">
+      <label for="workout_type" class="form-label">Workout Type</label>
+      <input type="text" name="workout_type" id="workout_type" class="form-control" value="Running" required />
+    </div>
+    <div class="mb-3">
+      <label for="duration" class="form-label">Duration (minutes)</label>
+      <input type="number" name="duration" id="duration" class="form-control" value="45" min="1" required />
+    </div>
+    <div class="mb-3">
+      <label for="calories" class="form-label">Calories Burned</label>
+      <input type="number" name="calories" id="calories" class="form-control" value="400" min="0" required />
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="date" name="date" id="date" class="form-control" value="2025-05-18" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Workout</button>
+  </form>
+
+  <h2>Workout History</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Duration (min)</th>
+        <th>Calories Burned</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-05-18</td>
+        <td>Running</td>
+        <td>45</td>
+        <td>400</td>
+      </tr>
+      <tr>
+        <td>2025-05-17</td>
+        <td>Swimming</td>
+        <td>30</td>
+        <td>250</td>
+      </tr>
+      <tr>
+        <td>2025-05-16</td>
+        <td>Yoga</td>
+        <td>60</td>
+        <td>200</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
